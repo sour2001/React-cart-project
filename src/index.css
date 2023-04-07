@@ -24,3 +24,9 @@
   margin-right: 10px;
   cursor: pointer;
 }
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  
+}
