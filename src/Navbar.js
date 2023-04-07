@@ -2,10 +2,12 @@ import React from 'react';
 
 const Navbar = (props) => {
   return (
+
     <div style={styles.nav}>
       <div style={styles.cartIconContainer}>
         <img style={styles.cartIcon} src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="cart-icon" />
         <span style={styles.cartCount}>4
+          
         </span>
       </div>
     </div>
