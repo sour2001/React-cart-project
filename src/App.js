@@ -32,10 +32,12 @@ class App extends React.Component {
   //       this.setState({ products: products, loading: false });
   //     });
   // }
-  firebase
-  .firestore()
+  this.db
   .collection("products")
-  .onSnapshot((snapshot) => {
+  // .where("price", ">", 900)
+  // .where("title", "==", "Washing Machine")
+  .orderBy("price", "asc")
+  .onSnapshot((snapshot) => { 
     const products = snapshot.docs.map((doc) => {
       const data = doc.data();
       data["id"] = doc.id;
@@ -154,7 +156,7 @@ class App extends React.Component {
       .collection("products")
       .add({
         img: "",
-        price: 900,
+        price: 9000,
         qty: 3,
         title: "Mobile Phone"
       })
